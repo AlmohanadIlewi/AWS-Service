@@ -1,0 +1,64 @@
+terraform Insatll On Windows über choco
+
+PS C:\Windows\system32> 
+
+-1 Get-ExecutionPolicy
+
+-2 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+-3 choco -v
+
+PS C:\Users\Al Mohanad Ilewi\Desktop\Terraform\Lesson-1> choco -v
+2.0.0
+
+-4 choco install terraform
+
+-4 terraform -v
+
+PS C:\Users\Al Mohanad Ilewi\Desktop\Terraform\Lesson-1> terraform -v
+Terraform v1.6.1
+on windows_amd64
+
+
+PS C:\Users\Al Mohanad Ilewi\Desktop\AWS-Service> aws configure sso
+
+
+PS C:\Users\Al Mohanad Ilewi\Desktop\AWS-Service\Terraform-aws-EC2> terraform init
+
+PS C:\Users\Al Mohanad Ilewi\Desktop\AWS-Service\Terraform-aws-EC2> terraform init
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Finding hashicorp/aws versions matching "~> 5.0"...
+- Installing hashicorp/aws v5.21.0...
+- Installed hashicorp/aws v5.21.0 (signed by HashiCorp)
+
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+PS C:\Users\Al Mohanad Ilewi\Desktop\AWS-Service\Terraform-aws-EC2>
+
+PS C:\Users\Al Mohanad Ilewi\Desktop\AWS-Service\Terraform-aws-EC2> terraform fmt 
+main.tf
+
+
+PS C:\Users\Al Mohanad Ilewi\Desktop\AWS-Service\Terraform-aws-EC2>  terraform validate
+Success! The configuration is valid.
+
+terraform validate
+
+terraform plan 
+
+terraform apply
