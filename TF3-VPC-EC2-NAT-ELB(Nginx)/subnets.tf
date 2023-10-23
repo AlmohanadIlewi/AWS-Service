@@ -20,7 +20,6 @@ resource "aws_subnet" "subnet_b" {
     Name = "TF Subnet B"
   }
 }
-
 resource "aws_subnet" "subnet_c" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = local.cidr_c

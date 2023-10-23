@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Aktualisiere das Paketverzeichnis

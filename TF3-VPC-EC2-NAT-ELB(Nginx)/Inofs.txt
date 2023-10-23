@@ -64,12 +64,12 @@
    - Jedes NAT-Gateway wird in einer bestimmten Availability Zone erstellt und redundant innerhalb dieser Zone implementiert. 
      Die Anzahl der NAT-Gateways, die Sie in einer Availability   Zone erstellen können, unterliegt einem Kontingent.
 
-  -  NAT-Gateways unterstützen die folgenden Protokolle: TCP, UDP und ICMP.
-  -  NAT-Gateways werden für den IPv4- oder IPv6-Verkehr unterstützt. Für IPv6-Datenverkehr führt NAT-Gateway NAT64 aus.
+   -  NAT-Gateways unterstützen die folgenden Protokolle: TCP, UDP und ICMP.
+   -  NAT-Gateways werden für den IPv4- oder IPv6-Verkehr unterstützt. Für IPv6-Datenverkehr führt NAT-Gateway NAT64 aus.
 
  ##### Was ist Amazon EC2?
 
-- Amazon Elastic Compute Cloud (Amazon EC2) bietet bedarfsbasiert skalierbare Rechenkapazität in der Amazon Web Services Cloud (AWS Cloud). 
+   - Amazon Elastic Compute Cloud (Amazon EC2) bietet bedarfsbasiert skalierbare Rechenkapazität in der Amazon Web Services Cloud (AWS Cloud). 
   Mit Amazon EC2 reduzieren Sie die Hardwarekosten, so dass Sie Anwendungen schneller entwickeln und bereitstellen können. 
   Mit Amazon EC2 können Sie so viele oder so wenige virtuelle Server starten, 
   wie Sie benötigen, die Sicherheit und das Netzwerk konfigurieren und den Speicher verwalten. 
@@ -77,13 +77,13 @@
   wie monatliche oder jährliche Prozesse oder Spitzen im Website-Datenverkehr zu bewältigen. 
   Wenn die Nutzung abnimmt, können Sie die Kapazität wieder reduzieren (herunterskalieren).
 
-- Amazon Elastic Compute Cloud (Amazon EC2) bietet die umfangreichste und 
+   - Amazon Elastic Compute Cloud (Amazon EC2) bietet die umfangreichste und 
   tiefste Computing-Plattform mit über 700 Instances und einer Auswahl an neuesten Prozessoren, 
   Speicher, Netzwerken, Betriebssystemen und Kaufmodellen, damit Sie die Anforderungen Ihres Workloads optimal erfüllen können. 
 
  #####  Was ist Elastic Load Balancer?
 
- - AWS Elastic Load Balancer (ELB) ist ein verwalteter Dienst von Amazon Web Services (AWS), 
+   - AWS Elastic Load Balancer (ELB) ist ein verwalteter Dienst von Amazon Web Services (AWS), 
    der den Datenverkehr auf Anwendungsebene in einer AWS-Umgebung verteilt. 
    ELB spielt eine entscheidende Rolle bei der Sicherstellung der Skalierbarkeit, 
    Verfügbarkeit und Zuverlässigkeit von Anwendungen, die in der AWS-Cloud gehostet werden.
@@ -114,4 +114,4 @@
    - Einfache Verwaltung: Da es sich um einen verwalteten Dienst handelt, kümmert sich AWS um die Wartung und Skalierung des Load Balancers, 
     sodass Sie sich auf die Entwicklung Ihrer Anwendungen konzentrieren können.
 
-  ####################################
+  ################################

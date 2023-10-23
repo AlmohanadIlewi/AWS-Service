@@ -6,7 +6,6 @@ route {
 cidr_block = "0.0.0.0/0" # Das gesamte Internet
 gateway_id = aws_internet_gateway.gw.id # Link zu unserem erstellten Internet Gateway
 }
-
 tags = {
 Name = "TF Route Table"
 }

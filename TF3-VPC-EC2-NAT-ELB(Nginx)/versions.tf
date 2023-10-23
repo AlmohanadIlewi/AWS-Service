@@ -14,7 +14,6 @@ terraform {
 # profile = "techstarter" # BITTE DEIN AWS PROFILE EINTRAGEN
 # }
 
-
 provider "aws" {
 region     = "eu-central-1"
 access_key = "DEIN_ACCESS_KEY"
