@@ -1,5 +1,4 @@
 terraform {
-
     required_providers {
         github = {
             source = "integrations/github"
@@ -8,8 +7,7 @@ terraform {
 }
 }
 
-
 # Configure the GitHub Provider 
 provider "github" {
-    token = "xxxxxxx"
+    token = "xxxxxx"
 }
