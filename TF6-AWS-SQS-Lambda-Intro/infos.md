@@ -1,0 +1,1 @@
+# PS C:\Users\Al Mohanad Ilewi\Desktop\AWS-Service_Terraform\TF6-AWS-SQS-Lambda-Intro> Compress-Archive -Path .\python-lambda\message.py -DestinationPath python-lambda.zip
