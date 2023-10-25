@@ -1,4 +1,4 @@
-aws_profile = "622445140057_Student"
+aws_profile = "DEIN_PROFILE"
 
 region = "eu-central-1"
 
