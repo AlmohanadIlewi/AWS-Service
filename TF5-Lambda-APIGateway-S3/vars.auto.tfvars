@@ -1,4 +1,4 @@
-aws_profile = "DEIN_PROFILE"
+aws_profile = "techstarter"
 
 region = "eu-central-1"
 
