@@ -1,7 +1,7 @@
 
 # AWS IAM-Rolle für Lambda
-resource "aws_iam_role" "my-sqs-role" {
-  name = "sqs_role"
+resource "aws_iam_role" "lambda-sqs-role" {
+  name = "lm-sqs_role"
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
     Statement = [
@@ -17,8 +17,8 @@ resource "aws_iam_role" "my-sqs-role" {
     })
 }
 
-resource "aws_iam_policy" "sqs-policy" {
-    name = "sqs-policy"
+resource "aws_iam_policy" "lambda-sqs-policy" {
+    name = "lambda-sqs-policy"
 
     policy = jsonencode({
     Version = "2012-10-17",
@@ -34,49 +34,39 @@ resource "aws_iam_policy" "sqs-policy" {
     })
 }
 
+resource "aws_iam_policy" "cloudwatch_policy" {
+
+
+  name         = "cloudwatch_policy"
+  path         = "/"
+  description  = "AWS IAM Policy for managing aws lambda role"
+  policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}
+EOF
+}
+
 resource "aws_iam_role_policy_attachment" "sqs-policy_attachment" {
-  policy_arn = aws_iam_policy.sqs-policy.arn
-  role       = aws_iam_role.my-sqs-role.name
+  policy_arn = aws_iam_policy.cloudwatch_policy.arn
+  role       = aws_iam_role.lambda-sqs-role.name
+}
+resource "aws_iam_role_policy_attachment" "cloudwatch_policy-attachment" {
+  policy_arn = aws_iam_policy.lambda-sqs-policy.arn
+  role       = aws_iam_role.lambda-sqs-role.name
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-# data "aws_iam_policy_document" "sqs_policy" {
-
-#     statement {
-#     sid    = "First"
-#     effect = "Allow"
-
-#     principals {
-
-#         type        = "*"
-#         identifiers = ["*"]
-#     }
-
-#     actions   = ["sqs:SendMessage"]
-#     resources = [aws_sqs_queue.q.arn]
-
-#     condition {
-
-#         test     = "ArnEquals"
-#         variable = "aws:SourceArn"
-#         values   = [aws_sns_topic.example.arn]
-#         }
-#     }
-# }
-
-# resource "aws_sqs_queue_policy" "sqs_policy" {
-
-#     queue_url = aws_sqs_queue.q.id
-#     policy    = data.aws_iam_policy_document.sqs_policy.json
-# }
